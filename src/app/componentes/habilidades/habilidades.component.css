@@ -1,0 +1,306 @@
+
+*{
+    margin: 0;
+  }
+  
+  .seccion{
+     box-sizing: border-box;
+    width: 100%;
+    
+   height: auto;
+   
+ 
+    
+   
+    background-color: rgb(244, 242, 242);
+ 
+   
+    
+  }
+  .contenedor{
+    width: 80%;
+    margin: auto;
+    height: 100%;
+ 
+    
+  }
+
+/* TITULOS */
+
+
+   
+.titulos {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+
+  
+  
+}
+
+.titulo-seccion{
+  
+  position: relative;
+  
+}
+
+
+.titulo-seccion h1{
+  position: absolute;
+  top: 50px;
+  left:0;
+  font-size: 50px;
+  color: rgb(37, 37, 37);
+  z-index: 10;
+  letter-spacing: 5px;
+  
+  width: 500px;
+
+
+  
+  }
+  
+  .titulo-seccion h2{
+position: absolute;
+top:15px;
+left: 15px;
+font-size: 200px;
+color: rgba(11, 58, 78, 0.063);
+/* font-style:bold 700; */
+z-index: 5;
+line-height: 145px;
+width:auto;
+letter-spacing: 25px;
+
+}
+.conten-edicion{
+  height: 40px;
+  width: 40px;
+  z-index: 100;
+}
+
+
+
+.edicion{
+  background-color: rgb(78, 178, 218);
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.edicion:hover{
+  background-color: rgb(64, 143, 175);
+}
+mat-icon{
+  color: rgb(235, 235, 235);
+}
+
+
+
+/* FIN TITULOS */
+
+
+/* SEPARADOR */
+.separador{
+
+ 
+  height: 5px;
+  border-radius: 10px;
+  background-color: rgb(78, 178, 218);
+  margin: 60px 200px 30px 70px ;
+}
+
+
+
+/* CONTENIDO */
+
+.contenido{
+
+
+  
+margin-top: 150px;
+ 
+  width: 100%;
+  height: auto;
+  display: grid;
+  padding-bottom: 150px;
+ 
+  justify-content: center;
+  gap: 1.5rem;
+  grid-auto-rows:200px ; 
+  grid-template-columns: repeat(auto-fit,123px); 
+ 
+ 
+}
+
+.card{
+ 
+  height: 100%;
+  width: 100%;
+  background-color: rgb(78, 178, 218);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  grid-column: span 2;
+
+  position: relative;
+  height: 283px;
+  
+
+}
+.barra{
+  position: absolute;
+  cursor: pointer;
+  top: -46px;
+  left: -55px;
+}
+.interior{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background-color: rgb(236, 236, 236);
+  width: 180px;
+  height: 198px;
+  z-index: 1000;
+  top: 45px;
+  right: -45px;
+  color: rgb(48, 48, 48);
+  
+
+}
+.porcent{
+  position: absolute;
+  left: 100%;
+  background-color: rgb(236, 236, 236);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1.5s;
+}
+.porcent-texto{
+  font-size: 60px;
+}
+
+.interior:hover
+.interior .porcent
+{
+  left: 0%;
+}
+
+
+.interior img{
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+ 
+}
+
+.sin-fondo{
+  color: rgb(43, 42, 42);
+  /* margin-bottom: -50px; */
+}
+.spacio{
+  height: 17px;
+ 
+}
+
+
+
+
+
+.card:first-of-type{
+  grid-column: 2 /span 2;
+}
+.card:nth-of-type(9){
+  grid-column: 2 /span 2;
+}
+.card:hover{
+  background-color: rgb(64, 143, 175);
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+  .titulo-seccion h1{
+    font-size: 45px;
+
+  }
+  .titulo-seccion h2{
+    font-size: 100px;
+    line-height: 60px;
+width:auto;
+letter-spacing: 5px;
+
+
+  }
+  .contenedor{
+    width: 100%;
+    margin: auto;
+    
+  }
+  
+  .separador{
+
+    height: 4px;
+    border-radius: 10px;
+    background-color: rgb(78, 178, 218);
+    margin: 50px 100px 10px 70px ;
+  }
+
+
+}
+
+
+
+@media  screen
+  and (min-device-width: 320px)
+  and (max-device-width: 417px){
+.card:first-of-type{
+    grid-column: 1 /span 2;
+  }
+  .card:nth-of-type(4){
+    grid-column: 1 /span 2;
+  }
+  .card:nth-of-type(9){
+    grid-column: 1 /span 2;
+  }
+  .contenido{
+grid-auto-rows: 283px;
+
+  }
+  }
+
+  @media  screen
+  and (min-device-width: 418px)
+  and (max-device-width: 900px){
+    .card:first-of-type{
+      grid-column: 1 /span 2;
+    }
+    .card:nth-of-type(odd){
+      grid-column: 2 /span 2;
+    }
+   /*  .card:nth-of-type(9){
+      grid-column: 1 /span 2;
+    } */
+    .contenido{
+      grid-auto-rows: 213px;
+      
+        }
+  
+  }
+  
+  
+

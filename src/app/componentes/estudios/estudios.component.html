@@ -1,0 +1,100 @@
+<section class="seccion">
+
+  <div class="contenedor">
+
+
+    <!-- TITULOS -->
+
+
+    <div class="titulos">
+
+      <div class="titulo-seccion">
+        <h1>Mis estudios</h1>
+        <h2>Education</h2>
+
+      </div>
+      
+      <div class="edicion-conten"> <!-- Contenedor invisible que ocupa el lugar cuando se hace login -->
+        <div class="edicion" *ngIf="rolActivo != 'Visitante'" > <!-- Solo es visible si el usuario esta logeado, no es un visitante -->
+
+          <mat-icon (click)="estudiosmodal.Show()">add</mat-icon><!-- boton llama el formulario modal con el metodo de crear -->
+          
+
+
+        </div>
+      </div>
+    </div>
+
+    <!-- SEPARADOR -->
+    <div class="separador"></div>
+
+
+    <div class="contenido">
+
+
+
+      <!-- CARD -->
+
+      <div *ngFor="let estudio of datos">
+        <!-- directiva que recorre los datos y crea una card para cada uno -->
+        <div class="card">
+
+          <!-- LOGO Y EDIT -->
+
+          <div class="logo">
+            <div class="thumbnail" *ngIf="estudio.img_insti !=null;else default_img">
+              <!-- si no hay una ruta para la imagen -->
+              <img class="left" [src]="estudio.img_insti" />
+            </div>
+            <ng-template #default_img>
+              <!--  carga una imagen por defecto -->
+              <div class="thumbnail">
+                <img class="left" src=".\assets\img\edu.jpg" alt="" />
+              </div>
+            </ng-template>
+
+
+
+            <div class="edicion-card" *ngIf="rolActivo != 'Visitante'"> <!-- Solo es visible si el usuario esta logeado, no es un visitante -->
+
+              <!-- boton llama el formulario modal con el metodo de editar -->
+              <button mat-icon-button 
+                (click)="estudiosmodal.ShowEditar(estudio.id,estudio.institucion,estudio.titulo,estudio.fecha_egre,estudio.img_insti)">
+                <mat-icon class="sin-fondo">edit </mat-icon>
+              </button>
+              <!-- boton llama al metodo eliminar con la id -->
+              <button mat-icon-button  (click)="borrar(estudio.id)">
+                <mat-icon class="sin-fondo">delete </mat-icon>
+              </button>
+            </div>
+          </div>
+
+          <!--FIN LOGO Y EDIT -->
+
+          <!-- DATOS DE LA CARD -->
+          <div class="right">
+            <div iv class="header">
+              <h1 class="institucion">{{estudio.institucion}}</h1>
+              <h1 class="años">{{estudio.fecha_egre}}</h1>
+            </div>
+            <div class="separator"></div>
+
+            <h1 class="titulo">{{estudio.titulo}}</h1>
+
+
+
+          </div>
+          <!--FIN DATOS DE LA CARD -->
+
+
+        </div>
+
+
+      </div>
+      <!--   FIN CARD -->
+      <!--  MODAL -->
+      <app-estudiomodal #estudiosmodal> </app-estudiomodal> <!-- formulario modal -->
+
+    </div>
+  </div>
+</section>

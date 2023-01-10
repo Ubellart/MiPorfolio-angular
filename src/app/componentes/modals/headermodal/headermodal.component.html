@@ -1,0 +1,59 @@
+<ng-container *ngIf="mostrar">
+    <!--  directiva que muestra o no el formulario modal -->
+  
+    <div class="fondo">
+      <div class="ventana">
+        <div class="header">
+         <h4 class="titulo"> <mat-icon >wallpaper</mat-icon>  {{accion}}</h4> <!-- muestra la variable accion para crear o medificar el formulario -->
+  
+          <mat-icon class="cerrar" (click)="Hide()">close </mat-icon> <!-- boton oculta el formulario -->
+  
+        </div>
+        <form class="form" [formGroup]="form" (ngSubmit)="editarHeader()">
+          <!-- formulario  -->
+  
+  
+          <mat-form-field class="inputs"> <!-- input nombre -->
+            <mat-label>Nombre</mat-label>
+            <input matInput autocomplete="off" formControlName="nombre" value="">
+          </mat-form-field>
+          <mat-form-field class="inputs"> <!-- input apellido -->
+            <mat-label>Apellido</mat-label>
+            <input matInput autocomplete="off" formControlName="apellido" value="">
+          </mat-form-field>
+          <mat-form-field class="inputs"><!-- input titulo o puesto  -->
+            <mat-label>Tiítulo</mat-label>
+            <input matInput autocomplete="off" formControlName="titulo" value="">
+          </mat-form-field>
+          <mat-form-field class="inputs"><!-- input url de la img de fondo -->
+            <mat-label>Imagen de fondo</mat-label>
+            <input matInput autocomplete="off" formControlName="img_fondo" value="">
+          </mat-form-field>
+          <mat-form-field class="inputs"><!-- input url del logo -->
+            <mat-label>Imagen de perfil o logo</mat-label>
+            <input matInput autocomplete="off" formControlName="img_perfil" value="">
+          </mat-form-field>
+  
+            <!--  botones guardar y cancelar -->
+        <div class="botones">
+          <button  (click)="Hide()" mat-stroked-button color="primary" >Cancelar
+            <mat-icon  >cancel</mat-icon><!-- boton oculta el formulario -->
+          </button>
+          <button  mat-raised-button color="primary" type="submit" [disabled]="!form.valid" >Guardar
+            <mat-icon >save </mat-icon><!-- boton guardar -->
+          </button>
+          </div>
+        
+        </form>
+  
+  
+  
+  
+  
+  
+      </div>
+  
+    </div>
+  
+  
+  </ng-container>

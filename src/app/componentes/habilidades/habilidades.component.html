@@ -1,0 +1,100 @@
+<section class="seccion">
+
+
+  <div class="contenedor">
+
+    <!-- TITULOS -->
+
+
+    <div class="titulos">
+
+      <div class="titulo-seccion">
+        <h1>Mis Habilidades</h1>
+        <h2>Skills</h2>
+      </div>
+      <div class=" conten-edicion" >
+        <div class="edicion" *ngIf="rol != 'Visitante'"> <!-- solo visible para usuario logeado -->
+
+    
+
+        <mat-icon (click)="habilidadesmodal.Show()"> <!-- boton llama el form modal con el metodo de show -->
+          add
+        </mat-icon>
+       
+
+
+      </div>
+    </div>
+    </div>
+
+    <!-- SEPARADOR -->
+    <div class="separador"></div>
+
+
+
+
+    <!-- CONTENIDO -->
+
+
+
+
+    <div class="contenido">
+
+
+      <!-- CARD -->
+
+
+      <div *ngFor="let habilidad of datos" class="card"><!--directiva recorre los datos y crea una card para cada uno -->
+        
+        <div class="interior">
+          <div class="porcent">
+            <h1 class="porcent-texto">{{habilidad.porcentaje}} %</h1>
+          </div>
+          <div class="spacio"></div>
+          <h2>{{habilidad.tecnologia}}</h2> <!-- cargamos nombre de la habilidad -->
+          <img [src]="habilidad.logo"alt=""> <!-- cargamos logo -->
+            
+
+         <!--  botones de eliminar y editar -->
+          <div class="edicion-card">
+            <button mat-icon-button (click)="habilidadesmodal.ShowEditar(habilidad.id,habilidad.tecnologia,habilidad.logo,habilidad.porcentaje,habilidad.color)" >
+              <mat-icon class="sin-fondo">edit </mat-icon>
+            </button>
+
+             <button mat-icon-button (click)="borrar(habilidad.id)">
+              <mat-icon class="sin-fondo">delete </mat-icon>
+            </button>
+
+          </div>
+        </div>
+
+      <!--   barra de progreso -->
+        <circle-progress class="barra" 
+        [percent]="habilidad.porcentaje"
+        [radius]="120" 
+        [showUnits]="false" 
+        [showImage]="false"
+        [outerStrokeColor]="habilidad.color" 
+        [backgroundColor]="'rgb(220, 220, 220)'" 
+        [outerStrokeWidth]="65"
+        [innerStrokeWidth]="0" 
+        [clockwise]="false" 
+        [animation]="true" 
+        [animationDuration]="1000"
+        [outerStrokeLinecap]="'bull'">
+        </circle-progress>
+
+
+
+      </div>
+    </div>
+    <!--  MODAL -->
+    <app-habilidadesmodal #habilidadesmodal></app-habilidadesmodal>
+
+
+  </div>
+
+
+
+
+</section>

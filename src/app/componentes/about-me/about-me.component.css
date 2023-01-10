@@ -1,0 +1,187 @@
+/* TITULOS */
+
+.titulos {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.titulo-seccion {
+  position: relative;
+}
+
+.titulo-seccion h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 50px;
+  color: rgb(37, 37, 37);
+  z-index: 10;
+  letter-spacing: 5px;
+  width: 500px;
+}
+
+.titulo-seccion h2 {
+  position: absolute;
+  top: -130px;
+  left: 15px;
+  font-size: 170px;
+  color: rgba(11, 58, 78, 0.063);
+  /* font-style: bold 700; */
+  z-index: 5;
+  line-height: 100px;
+  width: auto;
+  letter-spacing: 15px;
+}
+.conten-edicion{
+  height: 40px;
+  width: 40px;
+  z-index: 100;
+}
+.edicion {
+  background-color: rgb(78, 178, 218);
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 40px;
+}
+.edicion:hover {
+  background-color: rgb(64, 143, 175);
+}
+mat-icon {
+  color: rgb(235, 235, 235);
+}
+
+/* FIN TITULOS */
+
+/* SEPARADOR */
+.separador {
+  height: 5px;
+  border-radius: 10px;
+  background-color: rgb(78, 178, 218);
+  margin: 60px 190px 30px 70px;
+}
+
+/* SECCION SOBRE MI */
+
+.sobre-mi {
+  width: 100%;
+  height: auto;
+  min-height: 95vh;
+  background-color: rgb(236, 237, 238);
+  padding-top: 50px;
+}
+
+.subtitulo-seccion {
+  color: rgb(78, 178, 218);
+  letter-spacing: 2px;
+  font-size: 22px;
+  margin-bottom: 25px;
+  text-transform: capitalize;
+}
+.descripcion-seccion {
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-size: 18px;
+  margin-bottom: 45px;
+}
+.sobremi-foto img {
+  height: auto;
+  width: auto;
+  object-fit: cover;
+  border-radius: 7px;
+  box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.466);
+}
+.sobremi-textos {
+  width: 100%;
+  color: black;
+  padding-left: 30px;
+}
+.sobremi-contenido {
+  width: 80%;
+
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.btn-descarga {
+  
+  font-weight: 700;
+  margin: 10px;
+  border-radius: 25px;
+  width: 150px;
+  height: 50px;
+
+ 
+  border: none;
+
+  background-color: rgb(78, 178, 218);
+
+}
+.btn-descarga-a{
+  font-size: 15px;
+   color: rgb(255, 255, 255);
+}
+
+.btn-descarga:hover {
+  background-color: rgb(45, 103, 126);
+}
+
+/* media queries */
+
+/* TITULOS */
+
+@media (max-width: 600px) {
+  .sobremi-textos {
+    padding-left: 25px;
+  }
+
+  .separador {
+    margin-right: 150px;
+  }
+
+  .sobremi-foto img {
+    width: 100%;
+  }
+
+  .sobremi-contenido {
+    flex-direction: column-reverse;
+    width: 100%;
+    padding-bottom: 30px;
+  }
+  .descripcion-seccion {
+    padding-right: 25px;
+    text-align: center;
+  }
+
+  .edicion {
+    z-index: 1000;
+  }
+  .titulo-seccion h1 {
+    font-size: 45px;
+  }
+  .titulo-seccion h2 {
+    font-size: 100px;
+    line-height: 60px;
+    width: auto;
+    letter-spacing: 5px;
+    z-index: 10;
+    top: -70px;
+  }
+  .contenedor {
+    width: 100%;
+    margin: auto;
+  }
+
+  .separador {
+    height: 4px;
+    border-radius: 10px;
+    background-color: rgb(78, 178, 218);
+    margin: 50px 100px 10px 70px;
+  }
+}
+
+/*  FIN TITULOS */

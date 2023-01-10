@@ -1,0 +1,79 @@
+<ng-container *ngIf="mostrar">
+    <!--  directiva que muestra o no el formulario modal -->
+  
+    <div class="fondo">
+      <div class="ventana" >
+        <div class="header">
+          <h4 class="titulo"><mat-icon>work</mat-icon> {{accion}} </h4> <!-- muestra la variable accion para crear o medificar el formulario -->
+  
+          
+          <mat-icon class="cerrar" (click)="Hide()">close </mat-icon> <!-- boton oculta el formulario -->
+       
+  
+        </div>
+        <form class="form" [formGroup]="form_trabajo" (ngSubmit)="nuevoTrabajo()" >
+            
+          <!-- formulario  -->
+  
+  
+          <mat-form-field class="inputs" appearance="standard"> <!-- input PROYECTO -->
+            <mat-label> Puesto o Proyecto</mat-label>
+            <input matInput autocomplete="off" formControlName="proyecto" value="">
+          </mat-form-field>
+          <mat-form-field class="inputs" appearance="standard"> <!-- input EMPRESA -->
+            <mat-label>Empresa</mat-label>
+            <input matInput autocomplete="off" formControlName="empresa" value="">
+          </mat-form-field>
+
+          
+          <mat-form-field class="inputs" appearance="standard"><!-- input IMAGEN PROYECTO URL  -->
+            <mat-label>Imagen del proyecto o empresa</mat-label>
+            <input type="url" matInput autocomplete="off" formControlName="img_url" value="">
+          </mat-form-field>
+          <mat-form-field class="inputs" appearance="standard"><!-- input DESCRIPCION-->
+            <mat-label>Descripción del proyecto o trabajo </mat-label>
+            <textarea class="textarea" type="text" matInput placeholder="Descripción..."  matInput autocomplete="off" formControlName="descripcion" value=""  ></textarea>
+          </mat-form-field>
+          <mat-form-field class="inputs" appearance="standard"><!-- input LINK DEL PROYECTO  -->
+            <mat-label>Link del proyecto</mat-label>
+            <input type="url" matInput autocomplete="off" formControlName="link_proyecto" value="">
+          </mat-form-field>
+          <div class="fechas">
+          <mat-form-field class="inputs-corto" appearance="standard"><!-- input fecha inicio  -->
+            <mat-label>Año de inicio</mat-label>
+            <input type="" matInput autocomplete="off" formControlName="fecha_inicio" value="">
+          </mat-form-field>
+          <mat-form-field class="inputs-corto" appearance="standard" ><!-- input fecha fin  -->
+            <mat-label>Año de fin</mat-label>
+            <input type="" matInput autocomplete="off" formControlName="fecha_fin" value="">
+          </mat-form-field>
+        </div>
+
+          
+          
+        <!--  botones guardar y cancelar -->
+        <div class="botones">
+        <button  (click)="Hide()" mat-stroked-button color="primary" >Cancelar
+          <mat-icon  >cancel</mat-icon>
+        </button>
+        <button  mat-raised-button color="primary" type="submit" [disabled]="!form_trabajo.valid" >Guardar
+          <mat-icon >save </mat-icon>
+        </button>
+        </div>
+
+        
+        </form>
+  
+  
+        
+  
+  
+  
+  
+      </div>
+  
+    </div>
+  
+  
+  </ng-container>
+

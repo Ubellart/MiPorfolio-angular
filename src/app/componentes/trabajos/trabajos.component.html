@@ -1,0 +1,90 @@
+<section class="seccion">
+
+
+  <div class="contenedor">
+  
+  <!-- TITULOS -->
+  
+  
+      <div class="titulos">
+      
+          <div class="titulo-seccion">
+              <h1>Experiencia</h1>
+              <h2>Experience</h2>
+          </div>
+          <div class=" conten-edicion" >
+            <div class="edicion" *ngIf="rol != 'Visitante'"> <!-- solo visible para usuario logeado -->
+
+              
+                  <mat-icon (click)="trabajosmodal.Show()"> <!-- boton llama el form modal con el metodo de show --> 
+                    add</mat-icon>
+  
+                
+          </div>
+        </div>
+      </div>
+  
+  <!-- SEPARADOR -->
+  <div class="separador"></div>
+  
+  
+  
+  
+ <!-- CONTENIDO -->
+
+<div class="contenido"> 
+
+  <div *ngFor="let experiencia of datos" class="card"><!--directiva recorre los datos y crea una card para cada uno -->
+
+
+  <mat-card class="card">
+    <mat-card-header>
+     
+      <mat-card-title><h1>{{experiencia.proyecto}}</h1></mat-card-title> 
+
+      <mat-card-subtitle><h2>{{experiencia.empresa}}</h2></mat-card-subtitle>
+      <div class="edicion-card">
+                   
+        <button mat-icon-button (click)="trabajosmodal.ShowEditar(experiencia.id, experiencia.proyecto,experiencia.empresa,experiencia.img_url, experiencia.descripcion,experiencia.link_proyecto,experiencia.fecha_inicio,experiencia.fecha_fin)" >
+          <mat-icon class="sin-fondo">edit </mat-icon>
+        </button>
+        <button mat-icon-button  (click)="borrar(experiencia.id)">
+          <mat-icon  class="sin-fondo">delete </mat-icon>
+        </button>
+
+  </div>
+    </mat-card-header>
+    <div class="contenido-card">
+    
+    <img [src]="experiencia.img_url" alt="">
+
+
+    <div class="descripcion-card">
+
+      <h2 class="fecha" *ngIf="experiencia.fecha_inicio !=''||experiencia.fecha_fin !=''" >{{experiencia.fecha_inicio}} - {{experiencia.fecha_fin}}</h2>
+
+    <p>{{experiencia.descripcion}} </p>
+
+      <button *ngIf="experiencia.link_proyecto !=''">Ver</button>
+   
+
+     </div>
+</div>
+    
+  
+  </mat-card>
+  
+
+  
+
+
+
+</div>
+</div> 
+<!-- fin CONTENIDO -->
+
+   
+<app-trabajomodal #trabajosmodal>  </app-trabajomodal>
+</div>
+  
+</section>

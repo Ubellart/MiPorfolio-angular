@@ -1,0 +1,57 @@
+<!-- SOBRE MI -->
+
+<section class="sobre-mi">
+    <div class="sobremi-contenido">
+        <div class="sobremi-foto">
+            <img [src]="datos?.url_foto" alt="foto perfil">
+
+            <!--  https://i.ibb.co/0YYF8CF/foto-perfil.jpg link foto de perfil -->
+
+
+        </div>
+        <div class="sobremi-textos">
+
+            <!-- TITULOS -->
+
+
+            <div class="titulos">
+
+                <div class="titulo-seccion">
+                    <h1>Sobre mi</h1>
+                    <h2>About me</h2>
+                </div>
+                <div class=" conten-edicion" >
+                    <div class="edicion" *ngIf="rolActivo != 'Visitante'"> <!-- solo visible para usuario logeado -->
+
+
+                        <mat-icon
+                            (click)="aboutmodal.ShowEditar(datos.id,datos.titulo,datos.descripcion,datos.url_cv,datos.url_foto)">edit</mat-icon>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEPARADOR -->
+            <div class="separador"></div>
+
+            <!-- <h2 class="titulo-seccion">
+    Sobre Mi
+</h2> -->
+            <h3 class="subtitulo-seccion">
+                {{datos?.titulo}}
+            </h3>
+            <p class="descripcion-seccion">
+                {{datos?.descripcion}}
+            </p>
+            <button class="btn-descarga">
+                <a class="btn-descarga-a" href="{{datos?.url_cv}}" target="_blank" rel="noopener noreferrer">Descarga mi
+                    CV</a>
+            </button>
+        </div>
+
+
+    </div>
+
+    <app-aboutmodal #aboutmodal> </app-aboutmodal>
+</section>

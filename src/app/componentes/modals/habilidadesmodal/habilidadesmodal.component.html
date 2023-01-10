@@ -1,0 +1,60 @@
+<ng-container *ngIf="mostrar">
+    <!--  directiva que muestra o no el formulario modal -->
+  
+    <div class="fondo">
+      <div class="ventana">
+        <div class="header">
+          <h4 class="titulo"><mat-icon>inventory</mat-icon> {{accion}}</h4> <!-- muestra la variable accion para crear o medificar el formulario -->
+          <mat-icon class="cerrar" (click)="Hide()">close </mat-icon> <!-- boton oculta el formulario -->
+         
+  
+        </div>
+        <form class="form" [formGroup]="form_habilidad" (ngSubmit)="nuevaHabilidad()"  >
+            
+          <!-- formulario  -->
+  
+  
+          <mat-form-field class="inputs"> <!-- input tecnologia -->
+            <mat-label>Tecnologia</mat-label>
+            <input matInput autocomplete="off" formControlName="tecnologia" value="">
+          </mat-form-field>
+          <mat-form-field class="inputs"> <!-- input nivel en % -->
+            <mat-label>Nivel 0-100</mat-label>
+            <input type="number" min="0" max="100" matInput autocomplete="off" formControlName="porcentaje" value="" >
+          </mat-form-field>
+          <mat-form-field class="inputs"><!-- input url logo -->
+            <mat-label>Logo URL</mat-label>
+            <input type="url" matInput autocomplete="off" formControlName="logo" value="">
+          </mat-form-field>
+          <mat-form-field class="inputs"><!-- input color de la barra -->
+            <mat-label>Color de la barra </mat-label>
+            <input  type="color" matInput autocomplete="off" formControlName="color" value="">
+          </mat-form-field>
+
+          
+        <!--  botones guardar y cancelar -->
+        <div class="botones">
+        <!-- boton oculta el formulario -->
+          <button class="cancel" (click)="Hide()" mat-stroked-button  color="primary" >Cancelar
+            <mat-icon  >cancel</mat-icon>
+          </button> 
+          
+          <button  mat-raised-button color="primary" type="submit" [disabled]="!form_habilidad.valid" >Guardar
+            <mat-icon >save </mat-icon>
+          </button> <!-- boton guardar -->
+       
+  
+  
+        
+  
+  </div>
+   </form>
+
+
+  
+      </div>
+  
+    </div>
+  
+  
+  </ng-container>

@@ -1,0 +1,46 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgb(58, 58, 58);
+  height: 60px;
+}
+
+.navbar .items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu a {
+  margin: auto 20px;
+  font-weight: 100;
+  color: rgb(46, 198, 236);
+  position: relative;
+  top: -10px;
+  font-size: 20px;
+}
+.menu .btn--login {
+  background-color: rgb(88, 187, 226);
+  padding: 10px 10px;
+  color: rgb(254, 254, 254);
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.menu .btn--login:hover {
+  background-color: rgb(56, 126, 154);
+}
+
+.logo {
+  margin: auto 7px;
+  position: relative;
+  height: 80px;
+  width: 130px;
+  top: -5px;
+}
+
+.usericon {
+  vertical-align: middle;
+  /* font-size: 20px; */
+}

@@ -1,0 +1,298 @@
+*{
+  margin: 0;
+}
+
+.seccion{
+   box-sizing: border-box;
+  width: 100%;
+min-height: 95vh;
+ height: auto;
+
+  background-color: rgb(230, 229, 229);
+
+ 
+  
+}
+.contenedor{
+  width: 80%;
+  margin: auto;
+  height: 100%;
+
+  
+}
+
+
+/* TITULOS */
+
+
+ 
+.titulos {
+padding: 1rem;
+display: flex;
+justify-content: space-between;
+
+
+
+}
+
+.titulo-seccion{
+
+position: relative;
+
+}
+
+
+.titulo-seccion h1{
+position: absolute;
+top: 50px;
+left:0;
+font-size: 50px;
+color: rgb(37, 37, 37);
+z-index: 10;
+letter-spacing: 5px;
+
+width: 500px;
+
+
+
+}
+
+.titulo-seccion h2{
+position: absolute;
+top:15px;
+left: 15px;
+font-size: 200px;
+color: rgba(11, 58, 78, 0.063);
+/* font-style:bold 700; */
+z-index: 5;
+line-height: 145px;
+width:auto;
+letter-spacing: 25px;
+
+}
+
+.conten-edicion{
+  height: 40px;
+  width: 40px;
+  z-index: 100;
+}
+
+
+
+.edicion{
+background-color: rgb(78, 178, 218);
+border-radius: 50%;
+height: 40px;
+width: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.edicion:hover{
+background-color: rgb(64, 143, 175);
+}
+mat-icon{
+color: rgb(235, 235, 235);
+}
+
+
+
+/* FIN TITULOS */
+
+
+/* SEPARADOR */
+.separador{
+
+
+height: 5px;
+border-radius: 10px;
+background-color: rgb(78, 178, 218);
+margin: 60px 200px 30px 70px ;
+}
+
+
+
+/* CONTENIDO */
+
+.contenido{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  margin-top: 70px;
+}
+
+.card {
+  width: 370px;
+  height: 370px;
+  margin: 30px;
+ 
+  
+  
+
+}
+h1{
+  font-size: 22px;
+  color: rgb(41, 40, 40);
+}
+h2{
+  font-size: 17px;
+}
+
+p{
+ 
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-size: 18px;
+  margin-bottom: 45px;
+ 
+  color: azure;
+  padding: 20px;
+  padding-top: 70px;
+  
+ 
+
+}
+.fecha{
+  background: rgb(48, 119, 181);;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 20px;
+  display: inline-flex;
+  vertical-align: top;
+  justify-self: start;
+
+}
+
+.descripcion-card{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.712);
+  border-left: solid 100px;
+  border-color: rgb(48, 119, 181);
+  display: flex;
+  flex-direction: column;
+
+  align-items: center; 
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  transition:  1.5s ;
+
+}
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:  1.5s ;
+}
+
+.contenido-card{
+  position: relative;
+  overflow: hidden;
+  height: 80%;
+  border-radius: 15px;
+ 
+ 
+}
+
+/* Efectos Hover */
+.contenido-card:hover 
+
+.descripcion-card{
+  left: 0; 
+  border-left: solid 1px;
+  border-color: rgb(48, 119, 181);
+}
+
+.contenido-card:hover 
+img{
+  filter: blur(6px);
+}
+
+/*Fin Efectos Hover */
+
+.edicion-card{
+  display: flex;
+
+ 
+}
+.sin-fondo{
+  color: rgb(35, 35, 35);
+}
+mat-card-header{
+  justify-content: space-between;
+ 
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+
+/* TITULOS */
+
+@media (max-width: 600px) {
+
+ .edicion{
+   
+   z-index: 1000;
+ }
+  .titulo-seccion h1{
+    font-size: 45px;
+
+  }
+  .titulo-seccion h2{
+    font-size: 100px;
+    line-height: 60px;
+width:auto;
+letter-spacing: 5px;
+z-index: 10;
+
+
+  }
+  .contenedor{
+    width: 100%;
+    margin: auto;
+    
+  }
+  
+  .separador{
+
+    height: 4px;
+    border-radius: 10px;
+    background-color: rgb(78, 178, 218);
+    margin: 50px 100px 10px 70px ;
+  }
+
+
+}
+
+/* CARDS */
+@media (max-width: 600px) 
+{
+.card{
+ width: 93%;
+ 
+  margin:20px auto ;
+}
+
+
+}

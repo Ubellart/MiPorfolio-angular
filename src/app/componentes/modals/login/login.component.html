@@ -1,0 +1,182 @@
+
+<ng-container *ngIf="mostrar"  >
+
+<div class="fondo"  >
+  
+<div class="ventana">
+
+  <div class="ventana-izq">
+    
+    <div class="header">
+      <!-- muestra la variable accion para crear o medificar el formulario -->
+      <!-- <mat-icon class="icono" >person</mat-icon>  -->
+      <h4 class="titulo">Iniciar Sesion </h4> 
+
+     
+ <!-- boton oculta el formulario -->
+<mat-icon class="cerrar" (click)="Hide()">close </mat-icon>
+   
+
+    </div>
+
+    
+
+    <form action="" class="form" [formGroup]="form_Login" (ngSubmit)="loginUsuario()">
+
+<img  src=".\assets\img\logi.png" alt="">
+
+<div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+<div class="alert alert-success" *ngIf='loginSuccess'>{{successMessage}}</div>
+
+      <mat-form-field class="inputs" appearance="standard">
+        <mat-label>Ingresa tu Email  </mat-label>
+        <input matInput placeholder="Pepe@gmail.com" formControlName="nombreUsuario">
+        <button mat-icon-button matSuffix >
+             <mat-icon>email</mat-icon>
+        </button>
+     
+      <!--   <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+      </mat-form-field>
+
+
+
+
+      <mat-form-field class="inputs" appearance="standard">
+        <mat-label>Ingresa tu Password</mat-label>
+
+        <input matInput [type]="hide ? 'password' : 'text'" value="" formControlName="password" >
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <button type="submit" > Login</button>
+
+</form>
+
+  
+        
+
+      </div> 
+
+      <div class="ventana-der">
+
+        <div class="header">
+          <!-- <mat-icon class="icono">person_add</mat-icon> -->
+          <!-- muestra la variable accion para crear o medificar el formulario -->
+          <h4 class="titulo"> Nuevo Usuario </h4> 
+          <!-- boton oculta el formulario -->
+          <mat-icon class="cerrar" (click)="Hide()">close </mat-icon> 
+        </div>
+
+        <form action="" class="form" [formGroup]="form_Registro" (ngSubmit)="nuevoUsuario()">
+
+          <img  src=".\assets\img\register.png" alt="">
+          
+                <mat-form-field class="inputs" appearance="standard">
+                  <mat-label>Ingresa tu Email  </mat-label>
+                  <input matInput placeholder="Pepe@gmail.com"  formControlName="nombreUsuario" value="">
+                  <button mat-icon-button matSuffix >
+                       <mat-icon>email</mat-icon>
+                  </button>
+               
+                <!--   <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                </mat-form-field>
+          
+          
+          
+          
+                <mat-form-field class="inputs" appearance="standard">
+                  <mat-label>Ingresa tu Password</mat-label>
+          
+                  <input matInput [type]="hide ? 'password' : 'text'" value=""  matInput autocomplete="off" formControlName="password" >
+                  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </button>
+                </mat-form-field>
+                <mat-form-field class="inputs" appearance="standard">
+                  <mat-label>Reingresa tu Password</mat-label>
+          
+                  <input matInput [type]="hide ? 'password' : 'text'" value=""   matInput autocomplete="off" >
+                  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </button>
+                </mat-form-field>
+
+                <button type="submit"> REGISTRAR</button>
+          
+          </form>
+
+
+
+
+
+
+
+
+
+   <!--      SLIDER  -->
+
+        <div class="slider" [ngClass]="{si: estadoPositivo, no: !estadoPositivo}">
+
+
+         <div  *ngIf="estadoPositivo;then registro  else login" ></div>
+
+         <ng-template #registro >
+           <div class="contenedor-slider">
+
+            <h1 class="texto">
+             Aun no tienes tu cuenta?
+            </h1>
+            <h3 class="texto sub"> Crea cuenta ahora es rápido y facil !!!</h3>
+            <h1 class="boton"(click)="cambiaEstado()"> Registrate Aquí  </h1>
+          
+          </div>
+</ng-template>
+
+<ng-template #login>
+  <div class="contenedor-slider">
+
+
+  <h1 class="texto">
+    Ya tienes una cuenta?
+   </h1>
+   <h3 class="texto sub"> No pierdas mas tiempo y solo inicia sesion!!</h3>
+
+   <h1 class="boton"(click)="cambiaEstado()"> Iniciar Sesion </h1>
+  
+  </div>
+</ng-template>
+
+
+         
+         
+         
+         
+         
+         
+         
+         
+          
+
+        </div>
+
+
+
+
+      </div>
+           
+
+
+
+
+
+        
+        
+        
+        
+  </div>
+</div>
+
+
+</ng-container>

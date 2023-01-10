@@ -1,0 +1,72 @@
+<section class="seccion">
+
+
+    <div class="contenedor">
+
+        <!-- TITULOS -->
+
+
+        <div class="titulos">
+
+            <div class="titulo-seccion">
+                <h1>Contacto</h1>
+                <h2>Contact</h2>
+            </div>
+            <div class=" conten-edicion">
+                <div class="edicion" *ngIf="rolActivo != 'Visitante'"> <!-- solo visible para usuario logeado -->
+
+
+
+                    <mat-icon> <!-- boton llama el form modal con el metodo de show -->
+                        add</mat-icon>
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- SEPARADOR -->
+        <div class="separador"></div>
+
+
+        <div class="contenido">
+            <div class="contenedor-form">
+
+
+                <mat-form-field class="form" appearance="standard">
+                    <mat-label class="label">Nombre</mat-label>
+                    <input class="input" matInput placeholder="Placeholder">
+                </mat-form-field>
+
+                <mat-form-field class="form" appearance="standard">
+                    <mat-label class="label">Email</mat-label>
+                    <input class="input" type="email" matInput placeholder="Ex. pat@example.com">
+                </mat-form-field>
+
+                <mat-form-field class="form" appearance="standard">
+                    <mat-label class="label">Asunto</mat-label>
+                    <input class="input" matInput placeholder="Placeholder">
+                </mat-form-field>
+
+                <mat-form-field class="form" appearance="standard">
+                    <mat-label class="label">Mensaje</mat-label>
+                    <textarea class="input textarea " type="text" matInput placeholder="Descripción..." matInput
+                        autocomplete="off"></textarea>
+                </mat-form-field>
+
+
+            </div>
+
+            <div class="contenedor-textos">
+
+                <p>si queres contactarte conmigo enviame un mensaje desde <br> esta misma web o por medio de las
+                    siguientes formas </p>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+</section>
