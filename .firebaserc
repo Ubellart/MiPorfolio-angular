@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "porfolioap-2023"
-  }
+    "default": "porfolio-ublellart",
+    "porfolio-ubellart": "porfolio-ublellart"
+  },
+  "targets": {},
+  "etags": {}
 }
