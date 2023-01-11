@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -10,7 +11,7 @@ export class EstudiosService {
 
   constructor(private http:HttpClient) { }
 
-  url='http://localhost:8080';
+  url=environment.url;
 
   obtenerDatos():Observable<any>
 {

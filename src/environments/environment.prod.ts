@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  url:'https://porfolio-con-jwt-final-production.up.railway.app'
 };

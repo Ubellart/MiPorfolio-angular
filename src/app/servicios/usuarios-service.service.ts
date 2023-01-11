@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject,Observable } from 'rxjs';
 import { map } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 
 
@@ -12,7 +13,7 @@ export class UsuariosServiceService {
 
 
 
-  url='http://localhost:8080';
+  url=environment.url;;
 /* url='/api/'; */
 
 
