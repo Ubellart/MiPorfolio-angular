@@ -8,19 +8,12 @@
   .seccion{
      box-sizing: border-box;
     width: 100%;
-  min-height: 95vh;
+  min-height: 70vh;
    height: auto;
   
     background-color: rgb(47, 47, 47);
   
    
-    
-  }
-  .contenedor{
-    width: 80%;
-    margin: auto;
-    height: 100%;
-  
     
   }
   
@@ -30,7 +23,7 @@
   
    
   .titulos {
-  padding: 2rem; 
+ 
   display: flex;
   justify-content: space-between;
   
@@ -48,13 +41,13 @@
   .titulo-seccion h1{
   position: absolute;
   top: 30px;
-  left:15px;
+  left:5px;
   font-size: 35px;
   color: rgb(225, 223, 223);
   z-index: 10;
   letter-spacing: 2px;
-  
-  width: 500px;
+  width:auto;
+
   
   
   
@@ -62,14 +55,14 @@
   
   .titulo-seccion h2{
   position: absolute;
-  top:15px;
+  top:5px;
   left: 15px;
-  font-size: 100px;
+  font-size: 50px;
   color: rgba(173, 173, 174, 0.063);
  /*  font-style:bold 700; */
   z-index: 5;
   line-height: 70px;
-  width:auto;
+  width: 320px;
   letter-spacing: 10px;
   
   }
@@ -114,32 +107,70 @@
 
 .contenido{
     display: flex;
-    width: 80%;
+ 
+    width: 50%;
     border: 1px solid rgb(217, 217, 217);
     border-radius: 15px;
     box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.227);
-  /*     background-color: rgb(29, 29, 29);  */
-      margin-left: 70px;
-    padding: 50px;
+  
   
 } 
+.contenedor{
+  width: 80%;
+  margin: auto;
+  height: 100%;
+  overflow: hidden;
+ 
+ 
+}
+.cont{
+  width: 70%;
+ 
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+
 
 p{
-font-size: medium;
+font-size: 15px;
 color: aliceblue;
+padding: auto;
 
 }
 
+.contenedor-textos{
+
+padding: 30px;
+}
+
+.redes{
+
+ 
+ display: flex;
+ flex-direction: column;
+align-items: center;
+margin: 30px;
+  
+
+}
+.redes mat-icon{
+  margin: 15px;
+  font-size: 50px;
+}
+
 .contenedor-form{
+ 
     display: flex;
-    flex-direction: column;
-   width: 45%;
+    flex-direction: column; 
+   width: 90%;
+  margin: 5px auto; 
    
 
 
 }
 .textarea{
-    height: 200px;
+    height: 100px;
     resize: none;
    
     
@@ -156,19 +187,43 @@ color: aliceblue;
 
 
      
-    color: azure;
-    font-size: 18px;
+    color: rgb(223, 223, 223);
+    font-size: 15px;
     
   }
   .form{
-    color: rgb(252, 252, 252);
+    color: rgb(239, 23, 23);
       
+  }
+  .btn-form{
+
+    margin: 30px auto;
+    width: 30%;
+ 
+  }
+  .btn-form{
+  
+   
+    font-weight: 700;
+    margin: 10px;
+    border-radius: 25px;
+    width: 150px;
+    height: 50px;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    border: none;
+    background-color: rgb(78, 178, 218);
+  }
+  
+  .btn-form:hover{
+    background-color: rgb(45, 103, 126);
+    
   }
  
     /*change color of label*/
   ::ng-deep .mat-focused .mat-form-field-label {
   
-    color: rgb(0, 0, 0) !important;
+    color: rgb(235, 25, 25) !important;
    }
 
 

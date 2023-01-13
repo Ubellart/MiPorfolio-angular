@@ -1,25 +1,35 @@
-
- <!-- NAVBAR -->
-
-
- <nav class="navbar">
-    <div class="items">
-        <div class="logo"> 
-          <img src=".\assets\img\APLogo.png" alt="" class="logo">
-        <!--  <img src="https://argentinaprograma.inti.gob.ar/pluginfile.php/1/theme_moove/logo/1668983675/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2817%29.png" alt="" class="logo"> -->
-        </div>
-        <div class="menu">
-           <!--  <a href="#sobremi">Sobre mi</a> -->
-            <a href="#" *ngIf="roles=='Administrador'"> <mat-icon class="usericon">manage_accounts</mat-icon>{{nombreUsuario}}: Admin</a>
-            <a href="#" *ngIf="roles=='Usuario'"><mat-icon class="usericon" >account_circle</mat-icon> {{nombreUsuario}}</a>
-          <!--   <a href="#" *ngIf="roles=='Visitante'"> <mat-icon class="usericon" >no_accounts</mat-icon> </a> -->
-        
-            <a (click)="login.Show()" *ngIf="!usuarioLogged" href="#" class="btn--login">iniciar sesion</a>
-            <a (click)="login.logOut()" *ngIf="usuarioLogged" href="#" class="btn--login">Cerrar Sesion</a>
-        </div>
-    </div>  
-      </nav>  
-
-      <app-login  [titulo]="'hola'" #login></app-login>
+<!-- NAVBAR -->
 
 
+<nav class="navbar">
+  <div class="items">
+    <div class="logo">
+      <img src=".\assets\img\APLogo.png" alt="" class="logo">
+    
+    </div>
+    <div class="menu">
+    
+      <a href="#" class="user" *ngIf="roles=='Administrador'"> <mat-icon
+          class="usericon">manage_accounts</mat-icon>{{nombreUsuario}}: Admin</a>
+      <a href="#" class="user" *ngIf="roles=='Usuario'"><mat-icon class="usericon">account_circle</mat-icon>
+        {{nombreUsuario}}</a>
+
+
+      <p href="#" class="user" *ngIf="roles=='Administrador'"> <mat-icon
+          class="usericon">manage_accounts</mat-icon>{{nombreUsuario}}: Admin</p>
+      <p href="#" class="user" *ngIf="roles=='Usuario'"><mat-icon class="usericon">account_circle</mat-icon>
+        {{nombreUsuario}}</p>
+     
+
+      <a (click)="login.Show()" *ngIf="!usuarioLogged" href="#" class="btn--login ">iniciar sesion</a>
+      
+
+
+      <a (click)="login.logOut()" *ngIf="usuarioLogged" href="#" class="btn--login btn">Cerrar Sesion</a>
+      <a (click)="login.logOut()" *ngIf="usuarioLogged" href="#" class="iconlogout"> <mat-icon
+          class="usericon">logout</mat-icon></a>
+    </div>
+  </div>
+</nav>
+
+<app-login [titulo]="'hola'" #login></app-login>

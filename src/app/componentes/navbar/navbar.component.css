@@ -17,7 +17,8 @@
   color: rgb(46, 198, 236);
   position: relative;
   top: -10px;
-  font-size: 20px;
+  font-size: 15px;
+  padding: 5px;
 }
 .menu .btn--login {
   background-color: rgb(88, 187, 226);
@@ -31,6 +32,9 @@
 .menu .btn--login:hover {
   background-color: rgb(56, 126, 154);
 }
+.menu .btn--login.btn {
+  background-color: rgba(226, 88, 88, 0.552);
+}
 
 .logo {
   margin: auto 7px;
@@ -42,5 +46,51 @@
 
 .usericon {
   vertical-align: middle;
-  /* font-size: 20px; */
+}
+
+.iconlogout .usericon {
+  display: none;
+}
+p.user {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .btn--login.btn {
+    display: none;
+  }
+
+  .iconlogout .usericon {
+    display: inline;
+    color: aliceblue;
+    background-color: rgba(226, 88, 88, 0.658);
+    border-radius: 50%;
+    padding: 5px;
+  }
+
+  .menu a {
+    font-size: 15px;
+    padding: 5px;
+
+    margin: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .menu {
+    padding: 3px;
+    margin: 3px;
+  }
+  .menu a {
+    font-size: 12px;
+    margin: 1px;
+  }
+  .user .usericon {
+    display: none;
+  }
+}
+@media (max-width: 350px) {
+  .user {
+    display: none;
+  }
 }

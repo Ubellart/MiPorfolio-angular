@@ -219,23 +219,25 @@ img.left {
 
 /* TITULOS */
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   .edicion {
     z-index: 1000;
   }
   .titulo-seccion h1 {
     font-size: 45px;
+    width:auto;
   }
   .titulo-seccion h2 {
-    font-size: 100px;
+    font-size: 90px;
     line-height: 60px;
-    width: auto;
+   width: 320px;
     letter-spacing: 5px;
     z-index: 10;
   }
   .contenedor {
-    width: 100%;
+    width: 95%;
     margin: auto;
+    overflow: hidden;
   }
 
   .separador {
@@ -248,7 +250,7 @@ img.left {
 
 /*  FIN TITULOS */
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   .card {
     width: 400px;
     height: 300px;
@@ -265,7 +267,7 @@ img.left {
   .titulo {
     font-size: 18px;
     color: rgba(53, 53, 53, 0.685);
-
+    width:auto;
     margin: 0;
   }
 

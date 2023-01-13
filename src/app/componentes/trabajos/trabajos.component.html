@@ -43,7 +43,7 @@
       <mat-card-title><h1>{{experiencia.proyecto}}</h1></mat-card-title> 
 
       <mat-card-subtitle><h2>{{experiencia.empresa}}</h2></mat-card-subtitle>
-      <div class="edicion-card">
+      <div class="edicion-card"  *ngIf="rol != 'Visitante'" > <!-- Solo es visible si el usuario esta logeado, no es un visitante -->
                    
         <button mat-icon-button (click)="trabajosmodal.ShowEditar(experiencia.id, experiencia.proyecto,experiencia.empresa,experiencia.img_url, experiencia.descripcion,experiencia.link_proyecto,experiencia.fecha_inicio,experiencia.fecha_fin)" >
           <mat-icon class="sin-fondo">edit </mat-icon>

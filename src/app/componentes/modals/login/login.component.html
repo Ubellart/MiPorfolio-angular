@@ -3,13 +3,13 @@
 
 <div class="fondo"  >
   
-<div class="ventana">
+<div class="ventana" [ngClass]="{ sireg: estadoPositivo, noreg: !estadoPositivo}">
 
   <div class="ventana-izq">
     
     <div class="header">
       <!-- muestra la variable accion para crear o medificar el formulario -->
-      <!-- <mat-icon class="icono" >person</mat-icon>  -->
+   
       <h4 class="titulo">Iniciar Sesion </h4> 
 
      
@@ -50,7 +50,7 @@
         </button>
       </mat-form-field>
 
-      <button type="submit" > Login</button>
+      <button class="btn-form" type="submit"  > Login</button>
 
 </form>
 
@@ -59,8 +59,8 @@
 
       </div> 
 
-      <div class="ventana-der">
-
+      <div class="ventana-der" >
+<div class="registro">
         <div class="header">
           <!-- <mat-icon class="icono">person_add</mat-icon> -->
           <!-- muestra la variable accion para crear o medificar el formulario -->
@@ -103,11 +103,11 @@
                   </button>
                 </mat-form-field>
 
-                <button type="submit"> REGISTRAR</button>
+                <button class="btn-form" type="submit"> Registrar</button>
           
           </form>
 
-
+        </div>
 
 
 
@@ -147,36 +147,48 @@
   
   </div>
 </ng-template>
-
-
-         
-         
-         
-         
-         
-         
-         
-         
+      
           
 
         </div>
-
-
 
 
       </div>
            
 
 
+<!-- SLIDER PARA MOVIL-->
 
 
 
+<div class="cambio" >
+  <div  *ngIf="estadoPositivo;then registroR  else loginR" ></div>
+
+  <ng-template #registroR >
+ 
+     <p class="texto"> Aun no tienes tu cuenta? </p>
+     <h1 class="boton"(click)="cambiaEstado()"> Registrate Aquí  </h1>
+   
+
+</ng-template>
+
+<ng-template #loginR>
+
+<p class="texto"> Ya tienes una cuenta?  </p>
+<h1 class="boton"(click)="cambiaEstado()"> Iniciar Sesion </h1>
+
+</ng-template>
+
+  </div> 
+
+ </div>
+ 
         
         
         
         
   </div>
-</div>
+ 
 
 
 </ng-container>

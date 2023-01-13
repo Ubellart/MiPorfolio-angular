@@ -9,7 +9,7 @@
     <div class="titulos">
 
       <div class="titulo-seccion">
-        <h1>Mis Habilidades</h1>
+        <h1>Habilidades</h1>
         <h2>Skills</h2>
       </div>
       <div class=" conten-edicion" >
@@ -56,7 +56,7 @@
             
 
          <!--  botones de eliminar y editar -->
-          <div class="edicion-card">
+          <div class="edicion-card"  *ngIf="rol != 'Visitante'" > <!-- Solo es visible si el usuario esta logeado, no es un visitante -->
             <button mat-icon-button (click)="habilidadesmodal.ShowEditar(habilidad.id,habilidad.tecnologia,habilidad.logo,habilidad.porcentaje,habilidad.color)" >
               <mat-icon class="sin-fondo">edit </mat-icon>
             </button>

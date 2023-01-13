@@ -233,22 +233,24 @@ margin-top: 150px;
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   .titulo-seccion h1{
     font-size: 45px;
+    width:auto;
 
   }
   .titulo-seccion h2{
     font-size: 100px;
     line-height: 60px;
-width:auto;
+    width: 320px;
 letter-spacing: 5px;
 
 
   }
   .contenedor{
-    width: 100%;
+    width: 95%;
     margin: auto;
+    overflow: hidden;
     
   }
   
