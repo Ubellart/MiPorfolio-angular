@@ -43,7 +43,7 @@ mat-icon{
  right: 10%;  
 
   }
-  .edicion:hover {
+  .edicion:hover, .edicion:active {
     background-color: rgb(64, 143, 175);
   }
 .textos {

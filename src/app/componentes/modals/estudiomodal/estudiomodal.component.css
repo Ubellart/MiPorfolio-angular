@@ -50,7 +50,7 @@
     color: aliceblue;
     font-size: 30px;
   }
-  .cerrar:hover{
+  .cerrar:hover, .cerrar:active{
     color: rgb(234, 188, 188);
   }
  

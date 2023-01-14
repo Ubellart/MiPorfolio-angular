@@ -18,7 +18,8 @@
     
     .ventana{
         background-color: rgb(255, 255, 255);
-       width: 500px;
+     width: 500px;
+     
     height: auto;
     
       border-radius: 15px; 
@@ -49,7 +50,7 @@
       color: aliceblue;
       font-size: 30px;
     }
-    .cerrar:hover{
+    .cerrar:hover,.cerrar:active{
       color: rgb(234, 188, 188);
     }
    
@@ -94,4 +95,32 @@ justify-content: center;
       
      }
 
-     
+     @media (max-width: 1000px) {
+
+      .inputs{
+        margin: 0;
+        padding: 0;
+      }
+      .inputs-corto{
+         margin-top: 0;
+         margin-bottom: 0;
+        padding: 0;
+      }
+      .header{
+       
+       padding: 10px;
+      
+       height: 30px;
+ 
+    }
+    .form{
+
+ 
+ 
+      margin: 10px;
+  
+       
+      
+      
+      }
+     }

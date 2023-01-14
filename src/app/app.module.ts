@@ -33,7 +33,7 @@ import { EstudiomodalComponent } from './componentes/modals/estudiomodal/estudio
 import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
 
 import { ContactoComponent } from './componentes/contacto/contacto.component';
-import { FooterComponent } from './componentes/footer/footer.component';
+
 import { HabilidadesmodalComponent } from './componentes/modals/habilidadesmodal/habilidadesmodal.component';
 import { TrabajomodalComponent } from './componentes/modals/trabajomodal/trabajomodal.component';
 import { HeadermodalComponent } from './componentes/modals/headermodal/headermodal.component';
@@ -60,7 +60,7 @@ import { InterceptorProvider } from './servicios/interceptor-service.service';
        HabilidadesComponent,
        
        ContactoComponent,
-       FooterComponent,
+   
        HabilidadesmodalComponent,
        TrabajomodalComponent,
        HeadermodalComponent,

@@ -88,7 +88,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 }
-.edicion:hover{
+.edicion:hover, .edicion:active{
 background-color: rgb(64, 143, 175);
 }
 mat-icon{
@@ -211,7 +211,19 @@ img{
 img{
   filter: blur(6px);
 }
+/* Efectos active */
+.contenido-card:active 
 
+.descripcion-card{
+  left: 0; 
+  border-left: solid 1px;
+  border-color: rgb(48, 119, 181);
+}
+
+.contenido-card:active
+img{
+  filter: blur(6px);
+}
 /*Fin Efectos Hover */
 
 .edicion-card{

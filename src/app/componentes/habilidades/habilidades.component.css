@@ -90,7 +90,7 @@ letter-spacing: 25px;
   justify-content: center;
   align-items: center;
 }
-.edicion:hover{
+.edicion:hover,.edicion:active{
   background-color: rgb(64, 143, 175);
 }
 mat-icon{
@@ -219,7 +219,7 @@ margin-top: 150px;
 .card:nth-of-type(9){
   grid-column: 2 /span 2;
 }
-.card:hover{
+.card:hover,.card:active{
   background-color: rgb(64, 143, 175);
 }
 

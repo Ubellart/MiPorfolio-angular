@@ -83,7 +83,7 @@ img {
   align-items: center;
 }
 
-.edicion:hover {
+.edicion:hover,.edicion:active {
   background-color: rgb(64, 143, 175);
 }
 mat-icon {
@@ -165,7 +165,7 @@ img.left {
 .right {
   margin-left: 150px;
   margin-right: 20px;
-  display: flexbox;
+ 
 }
 
 .años {
@@ -251,28 +251,20 @@ img.left {
 /*  FIN TITULOS */
 
 @media (max-width: 1000px) {
-  .card {
-    width: 400px;
-    height: 300px;
 
-    margin: 5px;
-    margin-top: 15px;
-    margin-bottom: 25px;
-    background-color: rgba(255, 255, 255, 0.907);
-    box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.15);
-    border-radius: 5px;
-    word-wrap: break-word;
-    padding-top: 15px;
-  }
   .titulo {
-    font-size: 18px;
+    font-size: 15px;
     color: rgba(53, 53, 53, 0.685);
-    width:auto;
-    margin: 0;
+     width:auto; 
+    margin: 5px;
+
+  }
+  .titulos{
+    padding: 5px;
   }
 
   .institucion {
-    font-size: 25px;
+    font-size: 20px;
     color: rgb(42, 42, 42);
     padding-left: 5px;
   }
@@ -282,4 +274,22 @@ img.left {
     display: flex;
     flex-direction: column;
   }
+
+  .card {
+    height: 150px;
+    width: 90%;
+    margin: auto;
+   margin-top: 50px;
+    padding-top: 15px;
+  }
+  .años {
+  
+    padding: 10px 10px;
+    font-size: 15px;
+    width: 40px;
+   margin: auto;
+   
+
+  }
+
 }

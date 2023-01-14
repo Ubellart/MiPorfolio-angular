@@ -27,7 +27,7 @@
   background-color: rgb(78, 178, 218);
 }
 
-.btn-form:hover{
+.btn-form:hover, .btn-form:active{
   color: rgb(255, 255, 255);
   background-color: rgb(64, 143, 175);
   
@@ -100,7 +100,7 @@
   border: 1px solid black;
   text-shadow: rgba(51, 50, 50, 0.699) 1px 0 10px;
 }
-.boton:hover {
+.boton:hover, .boton:active {
   color: rgb(254, 254, 255);
   background-color: rgb(38, 98, 126);
 }
@@ -134,7 +134,7 @@
   color: aliceblue;
   font-size: 30px;
 }
-.cerrar:hover {
+.cerrar:hover,.cerrar:active {
   color: rgb(234, 188, 188);
 }
 
