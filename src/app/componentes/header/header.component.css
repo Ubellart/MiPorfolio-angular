@@ -1,70 +1,64 @@
 .header {
   width: 100%;
   height: 100vh;
- 
-/*   background-image: linear-gradient(
-      to right,
-      rgba(34, 34, 34, 0.37),
-      rgba(36, 36, 36, 0.411)
-    ),
-    url("https://i.ibb.co/J2y1sxq/hader-imgbyn.jpg");  */
-
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
   position: relative;
-
-
 }
 
-mat-icon{
-    color: azure;
+mat-icon {
+  color: azure;
 }
 
-.conten-edicion{
+.conten-edicion {
   height: 40px;
   width: 40px;
   z-index: 100;
- 
- 
 }
 
-
 .edicion {
-    background-color: rgb(78, 178, 218);
-    border-radius: 50%;
-    height: 40px;
-    width: 40px; 
-       display: flex; 
-    justify-content: center;
-    align-items: center; 
-  position: absolute; 
- top: 20%;
- right: 10%;  
-
-  }
-  .edicion:hover, .edicion:active {
-    background-color: rgb(64, 143, 175);
-  }
+  background-color: rgb(78, 178, 218);
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20%;
+  right: 10%;
+}
+.edicion:hover,
+.edicion:active {
+  background-color: rgb(64, 143, 175);
+}
 .textos {
- 
+  height: 80vh;
   text-align: center;
   font-size: 40px;
   color: aliceblue;
   text-shadow: black;
-  padding-top: 12%;
+  padding-top: 20vh;
   text-shadow: rgba(51, 50, 50, 0.699) 1px 0 10px;
 }
 .puesto {
+  padding: 0%;
+  margin: 0%;
   font-weight: 100;
   color: rgb(79, 181, 221);
   text-shadow: rgb(51, 50, 50) 1px 0 10px;
 }
 
 .img-firma {
+  padding-top: 5%;
   object-fit: fill;
-  width: 11em;
-  height: 5em;
+  width: 12em;
+  height: 6em;
+}
+.titulo {
+  margin: auto;
+  padding: auto;
 }
 
 /* media queries */

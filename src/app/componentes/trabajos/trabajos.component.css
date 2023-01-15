@@ -7,7 +7,7 @@
   width: 100%;
 min-height: 95vh;
  height: auto;
-
+padding-bottom: 30px;
   background-color: rgb(230, 229, 229);
 
  
@@ -283,7 +283,7 @@ z-index: 10;
   }
   .contenedor{
     width: 100%;
-    margin: auto;
+    margin:auto;
     overflow: hidden;
   }
   
@@ -304,7 +304,8 @@ z-index: 10;
 .card{
  width: 93%;
  
-  margin:20px auto ;
+  margin: 25px auto ;
+  padding: 0;
 }
 
 

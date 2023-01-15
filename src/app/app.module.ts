@@ -39,6 +39,7 @@ import { TrabajomodalComponent } from './componentes/modals/trabajomodal/trabajo
 import { HeadermodalComponent } from './componentes/modals/headermodal/headermodal.component';
 import { AboutmodalComponent } from './componentes/modals/aboutmodal/aboutmodal.component';
 import { InterceptorProvider } from './servicios/interceptor-service.service';
+import { ContactomodalComponent } from './componentes/modals/contactomodal/contactomodal.component';
 
 
 
@@ -64,7 +65,8 @@ import { InterceptorProvider } from './servicios/interceptor-service.service';
        HabilidadesmodalComponent,
        TrabajomodalComponent,
        HeadermodalComponent,
-       AboutmodalComponent
+       AboutmodalComponent,
+       ContactomodalComponent
    
   ],
   imports: [

@@ -33,7 +33,7 @@ export class HabilidadesmodalComponent implements OnInit {
     this.form_habilidad = formbuilder.group({
       tecnologia: ['', Validators.required],
       porcentaje: ['', Validators.required],
-      logo: ['', Validators.required],
+      logo: [''],
       color: [''],
       id: [''],
     });

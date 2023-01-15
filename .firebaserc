@@ -1,7 +1,8 @@
 {
   "projects": {
-    "default": "porfolio-ublellart",
-    "porfolio-ubellart": "porfolio-ublellart"
+    "default": "victor-ubellart",
+    "porfolio-ubellart": "porfolio-ublellart",
+    "porfolio": "victor-ubellart"
   },
   "targets": {},
   "etags": {}

@@ -22,11 +22,11 @@
         {{nombreUsuario}}</p>
      
 
-      <a (click)="login.Show()" *ngIf="!usuarioLogged" href="#" class="btn--login ">iniciar sesion</a>
+      <a (click)="login.Show()" *ngIf="!usuarioLogged" href="#" class="btn--login ">Iniciar Sesión</a>
       
 
 
-      <a (click)="login.logOut()" *ngIf="usuarioLogged" href="#" class="btn--login btn">Cerrar Sesion</a>
+      <a (click)="login.logOut()" *ngIf="usuarioLogged" href="#" class="btn--login btn">Cerrar Sesión</a>
       <a (click)="login.logOut()" *ngIf="usuarioLogged" href="#" class="iconlogout"> <mat-icon
           class="usericon">logout</mat-icon></a>
     </div>

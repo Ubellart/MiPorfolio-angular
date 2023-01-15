@@ -1,0 +1,52 @@
+<ng-container *ngIf="mostrar">
+    <!--  directiva que muestra o no el formulario modal -->
+  
+    <div class="fondo">
+      <div class="ventana">
+        <div class="header">
+          <h4 class="titulo"> <mat-icon>menu_book </mat-icon>{{accion}}</h4> <!-- muestra la variable accion para crear o medificar el formulario -->
+  
+          <mat-icon class="cerrar" (click)="Hide()">close </mat-icon> <!-- boton oculta el formulario -->
+  
+        </div>
+        <form class="form" [formGroup]="form" (ngSubmit)="crearNuevoContacto()">
+          <!-- formulario  -->
+  
+  
+          <mat-form-field class="inputs"> <!-- input institucion -->
+            <mat-label>Red Social</mat-label>
+            <input matInput autocomplete="off" formControlName="red_social" value="">
+          </mat-form-field>
+          <mat-form-field class="inputs"> <!-- input titulo -->
+            <mat-label>Logo URL</mat-label>
+            <input matInput autocomplete="off" formControlName="img_red" value="">
+          </mat-form-field>
+          <mat-form-field class="inputs"><!-- input fecha de egreso -->
+            <mat-label>link URL</mat-label>
+            <input matInput autocomplete="off" formControlName="url_red" value="">
+          </mat-form-field>
+         
+  
+          <div class="botones">
+            <button  (click)="Hide()" mat-stroked-button color="primary" >Cancelar
+              <mat-icon  >cancel</mat-icon><!-- boton oculta el formulario -->
+            </button>
+            <button  mat-raised-button color="primary" type="submit" [disabled]="!form.valid" >Guardar
+              <mat-icon >save </mat-icon>
+            </button>
+            </div>
+          
+        </form>
+  
+  
+      
+  
+  
+  
+  
+      </div>
+  
+    </div>
+  
+  
+  </ng-container>

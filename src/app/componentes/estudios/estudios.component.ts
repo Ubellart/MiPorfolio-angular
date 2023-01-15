@@ -13,7 +13,12 @@ export class EstudiosComponent implements OnInit {
 /* variables */
   datos:any;//guarda los datos recibidos del backend
   rolActivo!:string;// rol actual 
-  constructor(private estudioService:EstudiosService,private tokenservice:TokenServicService,private alerta:AlertServiceService) { }
+
+
+  constructor(
+    private estudioService:EstudiosService,
+    private tokenservice:TokenServicService,
+    private alerta:AlertServiceService) { }
 
   ngOnInit(): void 
   {

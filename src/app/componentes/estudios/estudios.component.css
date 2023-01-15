@@ -239,7 +239,12 @@ img.left {
     margin: auto;
     overflow: hidden;
   }
+  .thumbnail {
+width: 50px;
+height: 50px;
+left: 10px;
 
+  }
   .separador {
     height: 4px;
     border-radius: 10px;
@@ -264,7 +269,7 @@ img.left {
   }
 
   .institucion {
-    font-size: 20px;
+    font-size: 17px;
     color: rgb(42, 42, 42);
     padding-left: 5px;
   }
@@ -276,11 +281,12 @@ img.left {
   }
 
   .card {
-    height: 150px;
-    width: 90%;
+    height: 120px;
+  max-width: 340px;
     margin: auto;
-   margin-top: 50px;
-    padding-top: 15px;
+   margin-top: 25px;
+   margin-bottom: 25px;
+  
   }
   .años {
   
@@ -291,5 +297,10 @@ img.left {
    
 
   }
-
+  .right {
+    margin-left: 70px;
+    margin-right: 10px;
+   
+  }
+ 
 }

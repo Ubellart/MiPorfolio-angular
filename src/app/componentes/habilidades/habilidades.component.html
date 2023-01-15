@@ -52,8 +52,17 @@
           </div>
           <div class="spacio"></div>
           <h2>{{habilidad.tecnologia}}</h2> <!-- cargamos nombre de la habilidad -->
-          <img [src]="habilidad.logo"alt=""> <!-- cargamos logo -->
-            
+
+          <div class="img" *ngIf="habilidad.logo != null; else defaultimg">
+            <!-- si no hay una ruta para la imagen -->
+          <img [src]="habilidad.logo" alt=""> <!-- cargamos logo -->
+            </div>
+            <ng-template #defaultimg>
+              <!--  carga una imagen por defecto -->
+              <div class="img">
+                <img  src=".\assets\img\skill.png" alt="skill" />
+              </div>
+            </ng-template>
 
          <!--  botones de eliminar y editar -->
           <div class="edicion-card"  *ngIf="rol != 'Visitante'" > <!-- Solo es visible si el usuario esta logeado, no es un visitante -->

@@ -1,39 +1,37 @@
-
 <!-- <header class="header" [ngStyle]="{backgroundImage: 'url('+ datos?.img_fondo +')'}" > -->
 
-    <header class="header"
-    style="background-image: linear-gradient(
+<header class="header" style="background-image: linear-gradient(
         to right,
-        rgba(34, 34, 34, 0.318),
-        rgba(36, 36, 36, 0.557)
+        rgba(228, 144, 9, 0.024),
+        rgba(36, 36, 36, 0.787)
       ),
-      url({{datos?.img_fondo}})" >  <!-- imagen de fondo -->
-
+      url({{datos?.img_fondo}})"> <!-- imagen de fondo -->
 
 
     <div class="textos">
-        
 
 
-        <h1 class="titulo"> Hola, soy <br> {{datos?.nombre}}  {{datos?.apellido}} </h1>
 
-        <div class=" conten-edicion" >
+        <h1 class="titulo"> Hola, soy <br> {{datos?.nombre}} {{datos?.apellido}} </h1>
+
+        <div class=" conten-edicion">
             <div class="edicion" *ngIf="rolActivo != 'Visitante'"> <!-- solo visible para usuario logeado -->
 
-        <mat-icon  (click)="headerModal.ShowEditar(datos.id, datos.nombre, datos.apellido, datos.titulo, datos.img_fondo, datos.img_perfil)">edit</mat-icon>
-    </div>
-</div>
-        <h2 class="subtitulo">
-        </h2>
+                <mat-icon
+                    (click)="headerModal.ShowEditar(datos.id, datos.nombre, datos.apellido, datos.titulo, datos.img_fondo, datos.img_perfil)">edit</mat-icon>
+            </div>
+        </div>
+        <!-- <h2 class="subtitulo">
+        </h2> -->
         <p class="puesto"> {{datos?.titulo}} </p>
-       
-       <img class="img-firma" [src]="datos?.img_perfil" >
+
+        <img class="img-firma" [src]="datos?.img_perfil">
     </div>
-   <!--  -->
- 
-    <app-headermodal #headerModal ></app-headermodal>
+    <!--  -->
+
+    <app-headermodal #headerModal></app-headermodal>
 </header>
 
 
-<!-- https://i.ibb.co/6JxdRwy/Firma-blanca.png --> <!-- link foto firma --> 
-<!-- https://i.ibb.co/J2y1sxq/hader-imgbyn.jpg --><!-- link imagen fondo--> 
+<!-- https://i.ibb.co/6JxdRwy/Firma-blanca.png --> <!-- link foto firma -->
+<!-- https://i.ibb.co/J2y1sxq/hader-imgbyn.jpg --><!-- link imagen fondo-->

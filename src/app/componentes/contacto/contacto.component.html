@@ -18,7 +18,8 @@
 
 
 
-                    <mat-icon> <!-- boton llama el form modal con el metodo de show -->
+                    <mat-icon (click)="contactosmodal.Show()"> <!-- boton llama el form modal con el metodo de show -->
+                        
                         add</mat-icon>
 
                     </div>
@@ -64,21 +65,43 @@
 
         <div class="contenedor-textos">
 
-            <p>si queres contactarte conmigo enviame un mensaje desde <br> esta misma web o por medio de las
-                siguientes formas </p>
+            <p> <b> Gracias por mirar mi Porfolio espero que te haya gustado!!!</b> <br> <br> Para poder contactarme puedes mandarme un Email desde esta misma página, por WhatsApp o por cualquiera de mis redes.</p>
 <div class="redes">
-   <!--  <mat-icon>add</mat-icon>
+    <div *ngFor="let Contacto of datos" class="redes-icon">
+       
+       
+        <div class="edicion-card" *ngIf="rolActivo != 'Visitante'"> <!-- Solo es visible si el usuario esta logeado, no es un visitante -->
+
+            <!-- boton llama el formulario modal con el metodo de editar -->
+            <button mat-icon-button 
+              (click)="contactosmodal.ShowEditar(Contacto.id,Contacto.red_social,Contacto.img_red,Contacto.url_red)">
+              <mat-icon class="sin-fondo">edit </mat-icon>
+            </button>
+            <!-- boton llama al metodo eliminar con la id -->
+            <button mat-icon-button  (click)="borrar(Contacto.id)">
+              <mat-icon class="sin-fondo">delete </mat-icon>
+            </button>
+          </div>
+
+
+   <a class="red" href="{{Contacto.url_red}}" target="_blank"><img  [src]="Contacto.img_red"  alt="{{Contacto.red_social}}" class="logo"></a>
+   
+
+   </div>
+    <!--  <mat-icon>add</mat-icon>
     <mat-icon>add</mat-icon>
     <mat-icon>add</mat-icon>
     <mat-icon>add</mat-icon> -->
-    <img src=".\assets\img\git.png" alt="" class="logo">
+    <!-- 
     <img src=".\assets\img\facebook.png" alt="" class="logo">
     <img src=".\assets\img\insta.png" alt="" class="logo">
     <img src=".\assets\img\linkedin.png" alt="" class="logo">
     <img src=".\assets\img\twiter.png" alt="" class="logo">
-   
+    -->
 </div>
 </div>
         </div>
   <!--   </div> -->
+  <!--  MODAL -->
+  <app-contactomodal #contactosmodal> </app-contactomodal> <!-- formulario modal -->
 </section>
